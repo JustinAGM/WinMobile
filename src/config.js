@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
 // MongoDB Atlas URI (replace password if not using .env)
-const mongoURI = process.env.MONGO_URI || "mongodb+srv://justinagmachica:Mytulipsss1217!@project-2025.6kfg9ll.mongodb.net/userDB?retryWrites=true&w=majority&appName=Project-2025";
-
+const mongoURI = process.env.MONGO_URI || "mongodb+srv://justinagmachica:Mytulipsss1217!@project-2025.6kfg9ll.mongodb.net/?retryWrites=true&w=majority&appName=Project-2025";
 // Connect to MongoDB
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
