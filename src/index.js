@@ -1,5 +1,6 @@
 require('dotenv').config(); // Load .env variables
 
+const mongoURI = process.env.MONGO_URI;
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
