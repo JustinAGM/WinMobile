@@ -1,0 +1,21 @@
+{
+  "name": "login-app",
+  "version": "1.0.0",
+  "description": "A simple login/signup app using Node.js, Express, MongoDB, and EJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

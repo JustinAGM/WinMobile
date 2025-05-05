@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/MainLogin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Display error message -->
+      <% if (typeof error !== 'undefined' && error) { %>
+      <div class="error-message">
+        <p><%= error %></p>
+      </div>
+      <% } %>
+
+      <!-- Display success message -->
+      <% if (typeof success !== 'undefined' && success) { %>
+      <div class="success-message">
+        <p><%= success %></p>
+      </div>
+      <% } %>
+
+      <div class="form-box active" id="login-form">
+        <form action="/login" method="POST">
+          <h2>Welcome! <br />Login</h2>
+
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="email" name="email" required placeholder=" " />
+            <label for="login-email">Email</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" required placeholder=" " />
+            <label for="login-password">Password</label>
+          </div>
+
+          <button type="submit" name="login">Login</button>
+          <p>
+            Don't have an account yet?
+            <a href="/signup">Register Now</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <% if (typeof success !== 'undefined' && success) { %>
+    <script>
+      setTimeout(function () {
+        window.location.href = "/home";
+      }, 3000);
+    </script>
+    <% } %>
+  </body>
+</html>
